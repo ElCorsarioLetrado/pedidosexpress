@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Haz tu pedido/ECL</title>
+  <link  href="page2.html" >
+  <!-- MDB icon -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <style>
+    .box {
+      color: black;
+      margin-top: 20px;
+      display:none;
+    }
+    .check {
+      background: #fff;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <style>
+      .navbar .nav-link {
+       color: #ffffff !important;
+       }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-link" target="_blank" href="https://elcorsarioletrado.com/">
+        <strong>El Corsario Letrado</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+        <a class="nav-link" aria-current="page" href="https://elcorsarioletrado.com/"><strong>Quiénes somos</strong></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                  target="_blank"><strong>Medios de pago</strong>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"><strong>Planes y
+                  suscripciones</strong>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"><strong>Pedidos avanzados</strong></a>
+        </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item me-3 me-lg-0">
+        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                 target="_blank">
+        <i class="fab fa-youtube"></i>
+        </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+        </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+        <i class="fab fa-instagram"></i>
+        </a>
+        </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+      <div class="hero">
+                <video autoplay loop muted plays-inline class="back-video">
+                <source src="img/backsito ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+                </video>
+        <div class="raw">       
+          <form method="post" action="" 
+                 name="contact-form">
+          <div class="column">
+            <span class="badge text-bg-primary">Tipo de documento</span>
+              <select class="form-select" name="tipo" id="autoSizingSelect">
+              <option selected>Documento...</option>
+              <option value="Ensayo">Ensayo</option>
+              <option value="Artículo">Artículo</option>
+              <option value="Resumen">Resumen</option>
+              <option value="Análisis">Análisis</option>
+              <option value="Crítica">Crítica/Comentario</option>
+              <option value="Bitácora">Bitácora</option>
+              <option value="Traducción">Traducción</option>
+              <option value="Mapa conceptual">Mapa conceptual</option>
+              <option value="Ponencia">Ponencia</option>
+              <option value="Monografía">Monografía</option>
+              <option value="Video-ensayo">Video-ensayo</option>
+              <option value="Podcast">Podcast</option>
+              <option value="Diagrama">Diagrama</option>
+              <option value="Planeación">Planeación</option>
+              <option value="Guía">Guía</option>
+              <option value="Taller">Taller</option>
+              <option value="Planilla">Planilla</option>
+              <option value="Relatoría">Relatoría</option>
+              <option value="Acta">Acta</option>
+              <option value="Diapositivas">Diapositivas</option>
+              <option value="Anteproyecto">Anteproyecto de grado</option>
+              <option value="Tesina">Tesis de grado/Tesina</option>
+              <option value="Maestría">Tesis de Maestría</option>
+              <option value="Doctorado">Tesis de Doctorado</option>
+              <option value="Informe">Informe</option>
+              <option value="Proyecto de investigación">Proyecto de investigación</option>
+              <option value="Otro">Otro</option>
+              </select>
+              <div class="rows">
+              <span class="badge text-bg-primary">Tipo de servicio</span>
+              <select class="form-select" name="servicio">
+              <option selected>Servicio...</option>
+              <option value="Redacción">Redacción</option>
+              <option value="Corrección">Corrección</option>
+              <option value="Transcripción">Transcripción</option>
+              <option value="AsesoríaV">Asesoría virtual</option>
+              <option value="AsesoríaP">Asesoría presencial</option>
+              <option value="Masteclass">Máster Class</option>
+              <option value="Traducción">Traducción</option>
+              </select>
+              </div>
+              <div class="rows">
+              <span class="badge text-bg-primary">Cantidad bibliográfica</span>
+              <select class="form-select" name="cantidad" id="autoSizingSelect2">
+              <option selected>N° de bibliografías...</option>
+              <option value="1-3">1-3</option>
+              <option value="4-7">4-7</option>
+              <option value="8-12">8-12</option>
+              <option value="+13">+13</option>
+              </select>
+              </div>  
+              <div class="form-group col-md-6">
+              <span class="badge text-bg-primary">Descripción del pedido</span>
+              <textarea name="descripción" rows="10" placeholder="..."
+                        id="textarea"></textarea>
+              </div>
+          </div>    
+          <div class="column">
+              <div>
+              <span class="badge text-bg-primary"><input type="checkbox" name="complementos" value="check">Complementos</span>
+              </div>
+              <div class="check box">
+              <fieldset>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="portada" value="x" id="flexCheckDefault1">
+              <label class="form-check-label" for="flexCheckDefault1">Portada</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="imágenes" value="x" id="flexCheckDefault2">
+              <label class="form-check-label" for="flexCheckDefault2">Imágenes</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="tablas" value="x" id="flexCheckDefault3">
+              <label class="form-check-label" for="flexCheckDefault3">Tablas</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="gráficas" value="x" id="flexCheckDefault4">
+              <label class="form-check-label" for="flexCheckDefault4">Gráficas</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="pie" value="x" id="flexCheckDefault5">
+              <label class="form-check-label" for="flexCheckDefault5">Pie de página</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="contraportada" value="x" id="flexCheckDefault6">
+              <label class="form-check-label" for="flexCheckDefault6">Contra-portada</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="otros" value="x" id="flexCheckDefault7">
+              <label class="form-check-label" for="flexCheckDefault7">Otros(detállalo)</label>
+              </div>
+              <div class="text-bg-dark p-3">Formatos digitales</div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="pdf" value="x" id="flexCheckDefault8">
+              <label class="form-check-label" for="flexCheckDefault8">PDF</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="word" value="x" id="flexCheckDefault9">
+              <label class="form-check-label" for="flexCheckDefault9">WORD</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="mobi" value="x" id="flexCheckDefault10">
+              <label class="form-check-label" for="flexCheckDefault10">MOBI</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="pcr" value="x" id="flexCheckDefault11">
+              <label class="form-check-label" for="flexCheckDefault11">PCR</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="txt" value="x" id="flexCheckDefault12">
+              <label class="form-check-label" for="flexCheckDefault12">TXT</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="ebook" value="x" id="flexCheckDefault13">
+              <label class="form-check-label" for="flexCheckDefault13">EBOOK</label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="docx" value="x" id="flexCheckDefault14">
+              <label class="form-check-label" for="flexCheckDefault14">DOCX</label>
+              </div>
+              </fieldset>
+              </div>
+              <script type="text/javascript">
+                $(document).ready(function(){
+                $('input[type="checkbox"]').click(function(){
+                var inputValue = $(this).attr("value");
+                $("." + inputValue).toggle();
+                })
+                });
+              </script>
+          </div>
+          <div class="column">
+              <span class="badge text-bg-primary">Nombre</span>
+              <input
+                type="text"
+                class="form-control"
+                id="Nombre"
+                name="nombre"
+                placeholder="Nombre"
+              />
+              <span class="badge text-bg-primary">Teléfono</span>
+              <input
+                type="text"
+                class="form-control"
+                id="Teléfono"
+                name="teléfono"
+                placeholder="Teléfono"
+              />
+              <span class="badge text-bg-primary">Correo electrónico</span>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Correo electrónico"
+              />
+              <span class="badge text-bg-primary">Carrera o materia</span>
+              <input
+                type="text"
+                class="form-control"
+                id="Carrera"
+                name="carrera"
+                placeholder="Carrera o Materia"
+              />       
+              <span class="badge text-bg-primary">Número de páginas</span>
+              <input
+                type="text"
+                class="form-control"
+                id="Páginas"
+                name="páginas"
+                placeholder="N° de páginas"
+              />
+              <span class="badge text-bg-primary">Fecha final de entrega</span>
+              <input
+                type="date"
+                class="form-control"
+                id="dateOfDeliver"
+                name="fecha"
+              />
+              <span class="badge text-bg-primary">Normas</span>
+              <select class="form-select" name="normas" id="autoSizingSelect3">
+              <option selected>Tipo de normas</option>
+              <option value="APA">APA</option>
+              <option value="MLA">MLA</option>
+              <option value="CHICAGO">CHICAGO</option>
+              <option value="IEEE">IEEE</option>
+              <option value="VANCOUVER">VANCOUVER</option>
+              <option value="HARVARD">HARVARD</option>
+              <option value="BLUEBOOK">BLUEBOOK</option>
+              <option value="AMA">AMA</option>
+              </select>    
+              <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init>
+              <input type="submit" value="enviar" id="submit"/>
+              </button>
+          </div>
+          <div class="column">
+              <div class="alert alert-danger" role="alert">
+                ¡Recuerda!
+              </div>
+              <div class="text-bg-warning p-1">Adjunta o describe todos los archivos que requieras, así como
+                información clave (p.ej. tablas, formatos personalizados,
+                links, imágenes, etc.). Puedes hacerlo tanto por Whatsapp como por Email.
+              </div>
+              <div class="text-bg-success p-1"><strong>Via WhatsApp: (+57)3222525914 </strong>
+                (Envía un mensaje con tus archivos adjuntos e incluye tu <strong>nombre</strong>)
+              </div>
+              <div class="text-bg-primary p-1"><strong>Via Email: ceo@elcorsarioletrado.com</strong>
+                (Envía un mensaje con tus archivos adjuntos e incluye tu <strong>nombre</strong>)
+              </div>
+          </div>
+          </form>
+        </div>
+        <script src="Google Sheet.js"></script>
+      </div>
+    <footer class="bg-light text-lg-start">
+      <div class="py-4 text-center">
+        <a role="button" class="btn btn-primary btn-lg m-2" data-mdb-ripple-init
+           href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+          DESCUBRE EL CATÁBLOGO
+        </a>
+      </div>
+    
+      <hr class="m-0" />
+    
+      <div class="text-center py-4 align-items-center">
+        <p>Síguenos a través de nuestras redes sociales</p>
+        <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button" data-mdb-ripple-init
+           rel="nofollow" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
+           target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
+           target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">elcorsarioletrado.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+ </body>
+</html>
